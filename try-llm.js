@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         userInput.value = "";
 
         // LLMへのリクエストを送信
-        fetch("https://api.openai.com/v1/completions", {
+        fetch("https://api.openai.com/v1/chat/completions", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
             },
             body: JSON.stringify({
                 model: "gpt-4o-mini", // 使用するモデル名を確認してください
-                prompt: userMessage,
+                messages: [{ role: "user", content: userMessage }],
                 max_tokens: 100
             })
         })
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return response.json();
         })
         .then(data => {
-            const llmMessage = data.choices[0].text.trim();
+            const llmMessage = data.choices[0].message.content.trim();
             appendMessage("LLM", llmMessage);
         })
         .catch(error => {
