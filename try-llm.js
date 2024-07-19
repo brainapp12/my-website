@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
             body: JSON.stringify({
                 model: "gpt-4o-mini", // 使用するモデル名を確認してください
                 messages: [{ role: "user", content: userMessage }],
-                max_tokens: 100
+                max_tokens: 500
             })
         })
         .then(response => {
