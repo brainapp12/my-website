@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         userInput.value = "";
 
         // LLMへのリクエストを送信
-        fetch("https://api.openai.com/v1/engines/gpt-4o-mini/completions", {
+        fetch("https://api.openai.com/v1/engines/gpt-3.5-turbo/completions", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
