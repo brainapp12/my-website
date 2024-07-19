@@ -30,7 +30,11 @@
         <main>
             <section id="try-llm">
                 <h2>Try LLM!</h2>
-                <div id="chat-container">
+                <div id="api-key-container">
+                    <input type="text" id="api-key-input" placeholder="APIキーを入力してください">
+                    <button id="set-api-key-button">APIキーを設定</button>
+                </div>
+                <div id="chat-container" style="display: none;">
                     <div id="chat-box"></div>
                     <input type="text" id="user-input" placeholder="メッセージを入力してください..." />
                     <button id="send-button">送信</button>
