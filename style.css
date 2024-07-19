@@ -142,12 +142,22 @@ footer {
 }
 
 
+
 /* 追加されたチャットボックスのスタイル */
+#api-key-container {
+    margin-bottom: 20px;
+}
+
+#api-key-input {
+    width: calc(100% - 120px);
+    padding: 10px;
+    margin-right: 10px;
+}
+
 #chat-container {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
-    margin-top: 20px;
 }
 
 #chat-box {
