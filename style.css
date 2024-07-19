@@ -140,3 +140,35 @@ footer {
         margin-bottom: 5px;
     }
 }
+
+
+/* 追加されたチャットボックスのスタイル */
+#chat-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#chat-box {
+    height: 300px;
+    overflow-y: scroll;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+#user-input {
+    width: calc(100% - 90px);
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#send-button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
