@@ -24,25 +24,31 @@ document.addEventListener("DOMContentLoaded", function() {
         userInput.value = "";
 
         // LLMへのリクエストを送信
-        fetch("https://api.openai.com/v1/engines/gpt-3.5-turbo/completions", {
+        fetch("https://api.openai.com/v1/completions", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${apiKey}`
             },
             body: JSON.stringify({
+                model: "gpt-4o-mini", // 使用するモデル名を確認してください
                 prompt: userMessage,
                 max_tokens: 100
             })
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                return response.json().then(errorInfo => Promise.reject(errorInfo));
+            }
+            return response.json();
+        })
         .then(data => {
             const llmMessage = data.choices[0].text.trim();
             appendMessage("LLM", llmMessage);
         })
         .catch(error => {
             console.error("Error:", error);
-            appendMessage("LLM", "エラーが発生しました。もう一度試してください。");
+            appendMessage("LLM", `エラーが発生しました: ${error.error.message}`);
         });
     });
 
