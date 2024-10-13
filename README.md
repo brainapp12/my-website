@@ -19,3 +19,11 @@
 
 2024/08/02
 - より簡単にLLMを使ってもらえるように修正したい
+
+2024/10/14
+- ちょっと間は空いたけど、進捗したこと
+  - RAG（brainappRAG）の構築
+  -   multilungual-e5-base＋faiss＋gpt-4o-miniの座組
+  - ArrowPro-7B-KUJIRA・Japanese Stable LM Base Gamma 7B・Swallow-7b-instruct-hfの検証
+  - 10/14の検証だとArrowPro-7B-KUJIRAが特に応答が良さげ
+  - 
