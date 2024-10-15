@@ -27,4 +27,8 @@
   -   multilungual-e5-base＋faiss＋gpt-4o-miniの座組
   - ArrowPro-7B-KUJIRA・Japanese Stable LM Base Gamma 7B・Swallow-7b-instruct-hfの検証
   - 10/14の検証だとArrowPro-7B-KUJIRAが特に応答が良さげ
-  - 
+
+2024/10/15
+- RAGの活用で業務改善サービスを構築する
+  - brainappRAG：独自データ導入・ベクトル検索・クエリに基づく生成まで実施可能
+  - ベクトル検索部分の技術的更新の容易さが課題
