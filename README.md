@@ -36,3 +36,7 @@
 2024/10/20
 - WixのWebサイトに合わせてgithub pagesでも再度構築してみる
 -   未着手なので本日10/20より再度作成を再開する
+
+2024/11/11
+- 相当進捗している
+-   brainappYouTube動画タイトル分析、RAG、GraphRAG、GNN-RAG、Two-tower推薦モデル（SNSデータ×YouTube、SNSデータ×学術論文）、RLHF、brainapp×Createアプリ
